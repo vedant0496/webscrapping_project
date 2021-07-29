@@ -19,7 +19,7 @@ def new_search(request):
     response = requests.get(final_url)
     data = response.text
     soup = BeautifulSoup(data, features='html.parser')
-    print(soup)
+    # print(soup)
 
     post_listings = soup.find_all('li', {'class': 'result-row'})
 
